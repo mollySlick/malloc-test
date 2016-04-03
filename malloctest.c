@@ -11,14 +11,22 @@ gcc file.c
 int main(void)
 {
 	int count = 8;
-	int i = 0;
+	int i,j = 0;
+	int iterations = 1024;
+
+	for (j; j < iterations; j++)
+	{
 	char* block = malloc(count);
 
 	for (i; i < count; i++)
 	{
-		printf("%02x\r\n", block[i]);
+		if (block[i] != 0)
+		{
+			printf("malloc does not set initial values to zero.");
+		}
 	}
 
 	free(block);
+	}
 	return 0;
 }
