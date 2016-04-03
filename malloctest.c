@@ -11,7 +11,8 @@ gcc file.c
 int main(void)
 {
 	int count = 8;
-	int i,j = 0;
+	int i = 0;
+        int j = 0;
 	int iterations = 1024;
 
 	for (j; j < iterations; j++)
